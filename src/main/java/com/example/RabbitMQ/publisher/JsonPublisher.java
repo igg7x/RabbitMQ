@@ -27,7 +27,7 @@ public class JsonPublisher {
     }
 
     public void sendJsonMessage(User user) {
-        LOGGER.info("Sending JSON message...");
+        LOGGER.info(String.format("JSON message sent: %s", user.toString()));
         rabbitTemplate.convertAndSend(exchange, routingJsonKey, user);
     }
 

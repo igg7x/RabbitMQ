@@ -33,7 +33,7 @@ public class MessageController {
     @PostMapping("/publishJson")
     public ResponseEntity<String> sendJsonMessage(@RequestBody User user) {
         jsonPublisher.sendJsonMessage(user);
-        return ResponseEntity.ok("Message  JSON sent successfully!");
+        return ResponseEntity.ok("Message JSON sent successfully!");
     }
 
 }
